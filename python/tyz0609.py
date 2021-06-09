@@ -15,16 +15,20 @@ while six_consecutive_n == False:
             can.append(n)
             n = n +1
             break
+
     if purchase == False:
         cannot.append(n)
         #print(cannot)
         n = n + 1
     end = len(can)
 
+    if end > 5 and can[-1] - cannot[-1] > 5:
+        print(cannot[-1])
+
 
     if end > 5:
         lastsix = can[end-6:]
-        print(lastsix)
+        # print(lastsix)
         first = lastsix[0]
         continues = range(first,first+6)
         if list(continues) == lastsix:

@@ -1,3 +1,3 @@
-print('hi python')
+msg = 'hello world'
 
-print('use github token')
+print(msg)

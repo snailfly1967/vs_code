@@ -1,8 +1,9 @@
 startnumber = 6
 
 # wanted =  int(input("please input number you wanted:\n"))
-wanted = 6
-cannotbuy = 7
+wanted = 1
+cannotbuy = 0
+cannotnumber = 0
 
 while True:
     comb = [(x,y,z) for x in range(wanted//6+1) 
@@ -11,9 +12,12 @@ while True:
         if 6*x + 9*y + z*20 == wanted]
 
     if len(comb) == 0:
+        # print(wanted)
+        cannotnumber += 1
         cannotbuy = wanted
-    elif wanted - cannotbuy > 5:
-        print(cannotbuy)
+    elif wanted - cannotbuy > 6:
+        print(f'total can not buy numbers is {cannotnumber}')
+        print(f'the biggest cannot buy number is {cannotbuy}')
         break
 
     wanted +=1
